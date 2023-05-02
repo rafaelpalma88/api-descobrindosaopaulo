@@ -12,4 +12,4 @@ server.get('/cursos', (req, res) => {
   return res.json(cursos)
 })
 
-server.listen(3333)
+server.listen()
