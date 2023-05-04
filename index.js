@@ -20,8 +20,8 @@ const events = [
     ],
     startDate: '2023-04-29T22:00:00.000Z',
     endDate: '2023-04-30T00:00:00.000Z',
-    latitude: '-23.6038406',
-    longitude: '-46.6275783'
+    latitude: '-23.60374719010013',
+    longitude: '-46.62603453578621'
   },
   {
     id: '9fefe65e-b4ac-4ec7-8b19-1f17069f84f1',
@@ -34,8 +34,8 @@ const events = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget sapien sed lectus imperdiet vehicula quis vitae risus. Donec at dui pretium, vehicula quam nec, tristique leo. Nam egestas tellus orci, non commodo urna imperdiet nec. Sed at libero massa',
     startDate: '2023-04-29T22:00:00.000Z',
     endDate: '2023-04-30T00:00:00.000Z',
-    latitude: '-23.6038406',
-    longitude: '-46.6275783'
+    latitude: '-23.60374719010013',
+    longitude: '-46.62603453578621'
   },
 ]
 
