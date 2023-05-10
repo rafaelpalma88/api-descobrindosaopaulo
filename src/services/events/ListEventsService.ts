@@ -1,4 +1,4 @@
-// import { prismaClient } from "../../prisma";
+import { prismaClient } from "../../prisma"
 
 const events = [
   {
@@ -36,10 +36,19 @@ const events = [
 class ListEventsService {
   async execute() {
 
-    // const events = await prismaClient.events.findMany()
+    const events = await prismaClient.events.findMany({
+      where: {
+        active: true
+      }
+    })
 
     return events
   }
 }
 
 export { ListEventsService }
+
+
+
+
+
