@@ -7,7 +7,7 @@ class ListEventsController {
     const listEventsService = new ListEventsService();
 
     const events = await listEventsService.execute()
-  
+
     return res.json(events)
   }
 }

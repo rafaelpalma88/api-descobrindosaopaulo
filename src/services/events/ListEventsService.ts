@@ -9,7 +9,7 @@ const events = [
     address:
       'Av. Dr. Ricardo Jafet, 3332 - Vila Gumercindo, São Paulo - SP, 04260-020',
     description: [
-      'EleitaX entre as melhores esfihas de São Paulo e com pontuação máxima na pesquisa "Você é o crítico", do Guia da Folha, em que consumidores avaliaram comida, ambiente, serviços e atendimento, a Esfiha Imigrantes, uma casa simples, consolidou-se como referência em comida árabe na cidade',
+      'EleitaC entre as melhores esfihas de São Paulo e com pontuação máxima na pesquisa "Você é o crítico", do Guia da Folha, em que consumidores avaliaram comida, ambiente, serviços e atendimento, a Esfiha Imigrantes, uma casa simples, consolidou-se como referência em comida árabe na cidade',
       'Chegou a hora de conhecer mais este local com a melhor companhia! Junte-se conosco nesta noite de sábado!',
     ],
     startDate: '2023-04-29T22:00:00.000Z',
