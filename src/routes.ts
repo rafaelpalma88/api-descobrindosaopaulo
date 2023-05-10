@@ -39,4 +39,8 @@ router.get('/events', (req: Request, res: Response) => {
   return res.json(events)
 })
 
+router.post('/events', (req: Request, res: Response) => {
+  return res.json(events)
+})
+
 export { router }
