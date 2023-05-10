@@ -15,6 +15,8 @@ interface CreateEventRequest {
 class CreateEventService {
   async execute({ active, image, title, address, description, startDate, endDate, latitude, longitude }: CreateEventRequest) {
 
+    console.log('teste xxxx', title)
+
     if (title === '') {
       throw new Error("Empty title")
     }
@@ -29,7 +31,7 @@ class CreateEventService {
       throw new Error("Event already exists")
     }
 
-    const event = await prismaClient.product.create({
+    const event = await prismaClient.events.create({
       data: {
         active: active, 
         image: image, 
