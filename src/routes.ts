@@ -10,7 +10,7 @@ const router = Router()
 router.get('/events', new ListEventsController().handle)
 router.post('/events', new CreateEventController().handle)
 
-// SESSION
+// USER SESSION
 router.post('/session', new AuthUserController().handle)
 
 // USERS
