@@ -29,7 +29,7 @@ model Events {
 
 model User {
   id         String    @id @default(uuid())
-  cpf       String
+  cpf        String
   name       String
   email      String
   password   String

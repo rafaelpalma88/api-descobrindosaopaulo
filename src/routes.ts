@@ -1,4 +1,4 @@
-import { Router, Request, Response } from 'express'
+import { Router } from 'express'
 import { ListEventsController } from './controllers/events/ListEventsController'
 import { CreateEventController } from './controllers/events/CreateEventController'
 import { AuthUserController } from './controllers/users/AuthUserController'
