@@ -16,13 +16,9 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')))
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   if (err instanceof Error) {
     return res.status(400).json({ error: err.message })
+  } else {
+    next()
   }
-  return res.status(500).json({
-    status: 'error',
-    message: 'Internal server error',
-  })
 })
-
-// const port = process.env.PORT || 3000
 
 app.listen(env.PORT, () => console.log('servidor online !!!'))
