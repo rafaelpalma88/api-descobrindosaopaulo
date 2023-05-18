@@ -13,6 +13,9 @@ interface CreateEventRequest {
 }
 
 class CreateEventService {
+  // constructor(private eventsRepository: any) {}
+  // Implementar no futuro a inversão de dependência
+
   async execute({
     active,
     image,
