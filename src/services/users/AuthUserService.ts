@@ -1,54 +1,54 @@
-import { prismaClient } from '../../prisma'
-import { compare } from 'bcryptjs'
-import { sign } from 'jsonwebtoken'
+// import { prismaClient } from '../../prisma'
+// import { compare } from 'bcryptjs'
+// import { sign } from 'jsonwebtoken'
 
-interface AuthRequest {
-  cpf: string
-  password: string
-}
+// interface AuthRequest {
+//   cpf: string
+//   password: string
+// }
 
-class AuthUserService {
-  async execute({ cpf, password }: AuthRequest) {
-    const user = await prismaClient.user.findFirst({
-      where: {
-        cpf,
-      },
-    })
+// class AuthUserService {
+//   async execute({ cpf, password }: AuthRequest) {
+//     const user = await prismaClient.user.findFirst({
+//       where: {
+//         cpf,
+//       },
+//     })
 
-    if (!user) {
-      throw new Error('User/password incorrect')
-    }
+//     if (!user) {
+//       throw new Error('User/password incorrect')
+//     }
 
-    const passwordMatch = await compare(password, user.password)
+//     const passwordMatch = await compare(password, user.password)
 
-    console.log('passwordMatch', passwordMatch)
+//     console.log('passwordMatch', passwordMatch)
 
-    if (!passwordMatch) {
-      // senha incorreta
-      throw new Error('User/password incorrect')
-    }
+//     if (!passwordMatch) {
+//       // senha incorreta
+//       throw new Error('User/password incorrect')
+//     }
 
-    // gerar token jwt
-    const token = sign(
-      {
-        name: user.name,
-        cpf: user.cpf,
-      },
-      process.env.JWT_SECRET,
-      {
-        subject: user.id,
-        expiresIn: '30d',
-      },
-    )
+//     // gerar token jwt
+//     const token = sign(
+//       {
+//         name: user.name,
+//         cpf: user.cpf,
+//       },
+//       process.env.JWT_SECRET,
+//       {
+//         subject: user.id,
+//         expiresIn: '30d',
+//       },
+//     )
 
-    return {
-      id: user.id,
-      name: user.name,
-      cpf: user.cpf,
-      email: user.email,
-      token,
-    }
-  }
-}
+//     return {
+//       id: user.id,
+//       name: user.name,
+//       cpf: user.cpf,
+//       email: user.email,
+//       token,
+//     }
+//   }
+// }
 
-export { AuthUserService }
+// export { AuthUserService }
