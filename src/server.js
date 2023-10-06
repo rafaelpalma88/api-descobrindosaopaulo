@@ -1,6 +1,6 @@
-import Fastify from 'fastify'
+import { fastify } from 'fastify'
 
-const fastify = Fastify()
+const server = fastify()
 
 const events = [
   {
@@ -37,10 +37,12 @@ const events = [
   },
 ]
 
-fastify.get('/events', (request, reply) => {
-  reply.status(200).send(events)
+// Listar uma lista de videos
+server.get('/videos', (request, reply) => {
+  return reply.status(200).send(events)
 })
 
-fastify.listen({ port: 10000 }, (err, address) => {
-  if (err) throw err
+server.listen({
+  host: '0.0.0.0',
+  port: process.env.PORT ?? 3333,
 })
