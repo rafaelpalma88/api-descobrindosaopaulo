@@ -41,6 +41,6 @@ fastify.get('/events', (request, reply) => {
   reply.status(200).send(events)
 })
 
-fastify.listen({ port: 3000 }, (err, address) => {
+fastify.listen({ port: process.env.PORT ?? 3000 }, (err, address) => {
   if (err) throw err
 })
