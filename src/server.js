@@ -38,7 +38,7 @@ const events = [
 ]
 
 // Listar uma lista de videos
-server.get('/videos', (request, reply) => {
+server.get('/events', (request, reply) => {
   return reply.status(200).send(events)
 })
 
